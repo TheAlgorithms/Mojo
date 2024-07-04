@@ -1,0 +1,5 @@
+# for PyCharm
+.idea/
+
+# for Mac
+.DS_Store
