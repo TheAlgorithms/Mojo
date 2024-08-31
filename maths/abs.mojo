@@ -37,10 +37,10 @@ struct Math:
     ## we define the absolute value |z| as being the distance from z to 0 in the complex plane C.
     ## Reference: https://www2.clarku.edu/faculty/djoyce/complex/abs.html#:~:text=For%20a%20complex%20number%20z,on%20the%20real%20number%20line.
     @staticmethod
-    fn absolute(number: complex) -> Float16:
+    fn absolute(number: complex) -> Float32:
         ## Returns the absolute value of a complex number.
         ## >>> Math.absolute(complex(5, 12))
         ## 13.0
         ## >>> Math.absolute(complex(3, 4))
         ## 5.0
-        return math.sqrt(Float16(number.real_part) ** 2 + number.imaginary_part ** 2)
+        return math.sqrt(Float32(number.real_part) ** 2 + number.imaginary_part ** 2)
