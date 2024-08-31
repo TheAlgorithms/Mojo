@@ -85,7 +85,7 @@ We want your work to be readable by others; Although there is no naming conventi
 ## Description + link
 
 ## Comment
-fn algo(arr):
+fn algo(arr: List[Int]) -> Int:
   ## Comment
   return arr[0] + arr[1]
 

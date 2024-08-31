@@ -1,3 +1,4 @@
+## Aliquot Sum
 '''
     Finds the aliquot sum of an input integer, where the
     aliquot sum of a number n is defined as the sum of all

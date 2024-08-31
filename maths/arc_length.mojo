@@ -1,6 +1,6 @@
-'''
-Finds the arc length of a circle given central angle (degrees) and radius values.
-'''
+## Arc Length
+##
+## Finds the arc length of a circle given central angle (degrees) and radius values.
 
 fn arc_length(angle: Int, radius: Int) -> Float64:
     """

@@ -1,7 +1,7 @@
 # Directory
 
 ## Maths
-  * [Abs](maths/abs.mojo)
+  * [Absolute Value](maths/abs.mojo)
   * [Addition Without Arithmetic](maths/addition_without_arithmetic.mojo)
   * [Aliquot Sum](maths/aliquot_sum.mojo)
   * [Allocation Number](maths/allocation_number.mojo)
