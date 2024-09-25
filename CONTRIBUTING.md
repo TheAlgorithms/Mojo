@@ -47,7 +47,7 @@ We appreciate any contribution, from fixing a grammar mistake in a comment to im
 **Identical implementations** are not allowed.
 
 ### Environment
-The environment that I am using is `mojo 0.2.1 (64d14e85)` on Ubuntu 20.04.6 LTS.
+My current version is `mojo 24.4.0 (64d14e85)` on Ubuntu 20.04.6 LTS. There is no strict requirement on the version because of the fast update on this new language. However, we encourage you to use newer versions.
 Installing the SDK is guided by this doc: https://docs.modular.com/mojo/manual/get-started/
 
 ### Implementation requirements
