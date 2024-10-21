@@ -3,7 +3,7 @@ authors = ["TheAlgorithms <hello@the-algorithms.com>"]
 channels = ["conda-forge", "https://conda.modular.com/max"]
 description = "All algorithms implemented in Mojo. (The first open-sourced Mojo repository on GitHub)"
 name = "Mojo"
-platforms = ["linux-64"]
+platforms = ["osx-arm64", "linux-64"]
 version = "0.1.0"
 
 [tasks]
