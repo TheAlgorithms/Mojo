@@ -3,3 +3,6 @@
 
 # for Mac
 .DS_Store
+
+# for magic
+.magic
