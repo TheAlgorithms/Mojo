@@ -1,15 +1,14 @@
 ## Average mean
+## Find mean of a list of numbers.
+## Wiki: https://en.wikipedia.org/wiki/Mean.
 
 fn mean(nums: List[Int]) raises -> Float64:
     """
-    Find mean of a list of numbers.
-    Wiki: https://en.wikipedia.org/wiki/Mean.
-
     Parameters:
-    - nums: A list of integers.
+    - nums: List of integers.
 
     Returns:
-    - The mean of the list of numbers.
+    - Mean of the list of numbers.
 
     ```mojo
     from testing import assert_almost_equal, assert_raises
