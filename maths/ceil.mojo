@@ -7,13 +7,13 @@
 fn ceil(number: Float64) -> Int:
     """
     Return the ceiling of number as an integer.
-    
+
     Parameters:
     - number: A floating-point number.
 
     Returns:
     - The smallest integer greater than or equal to number.
-    
+
     ```mojo
     from testing import assert_equal
     from ceil import ceil
@@ -26,8 +26,7 @@ fn ceil(number: Float64) -> Int:
     assert_equal(ceil(-1.9), -1)
     ```
     """
-    var int_number = int(number)
+    var int_number = Int(number)
     if number - int_number > 0.0:
         return int_number + 1
     return int_number
-
