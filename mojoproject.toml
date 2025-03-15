@@ -9,4 +9,4 @@ version = "0.1.0"
 [tasks]
 
 [dependencies]
-max = ">=24.5.0,<25"
+max = "~=25.1"
