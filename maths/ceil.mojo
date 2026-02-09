@@ -7,13 +7,13 @@
 fn ceil(number: Float64) -> Int:
     """
     Return the ceiling of number as an integer.
-    
+
     Parameters:
     - number: A floating-point number.
 
     Returns:
     - The smallest integer greater than or equal to number.
-    
+
     ```mojo
     from testing import assert_equal
     from ceil import ceil
