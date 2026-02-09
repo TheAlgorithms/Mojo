@@ -1,0 +1,34 @@
+name: verify_directory
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Generate DIRECTORY.md
+        run: |
+          python3 scripts/build_directory_md.py Mojo . .mojo > DIRECTORY_NEW.md
+
+      - name: Compare with existing DIRECTORY.md
+        run: |
+          if ! diff -q DIRECTORY.md DIRECTORY_NEW.md > /dev/null 2>&1; then
+            echo "Error: DIRECTORY.md is out of date!"
+            echo "Please run: python3 scripts/build_directory_md.py Mojo . .mojo > DIRECTORY.md"
+            echo ""
+            echo "Differences:"
+            diff DIRECTORY.md DIRECTORY_NEW.md || true
+            exit 1
+          fi
+          echo "DIRECTORY.md is up to date!"

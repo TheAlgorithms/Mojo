@@ -1,0 +1,39 @@
+name: lint
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check file naming conventions
+        run: |
+          # Check for files with spaces in names
+          if find . -type f -name "* *" | grep -v ".git" | grep -q .; then
+            echo "Error: Files with spaces found:"
+            find . -type f -name "* *" | grep -v ".git"
+            exit 1
+          fi
+          
+          # Check for uppercase letters in .mojo files
+          if find . -type f -name "*.mojo" | grep -E '[A-Z]' | grep -q .; then
+            echo "Error: .mojo files should use lowercase with underscores:"
+            find . -type f -name "*.mojo" | grep -E '[A-Z]'
+            exit 1
+          fi
+
+      - name: Check for trailing whitespace
+        run: |
+          if git grep -n '[[:space:]]$' -- '*.mojo' '*.md'; then
+            echo "Error: Trailing whitespace found"
+            exit 1
+          fi
